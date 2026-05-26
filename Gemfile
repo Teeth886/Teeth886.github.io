@@ -1,11 +1,10 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3"
-gem "jekyll-remote-theme"
+gem "minimal-mistakes-jekyll"
 gem "jekyll-paginate"
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "jekyll-feed"
 gem "jekyll-gist"
 gem "jemoji"
-gem "minimal-mistakes-jekyll"

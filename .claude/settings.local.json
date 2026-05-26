@@ -23,7 +23,14 @@
       "PowerShell(gh auth *)",
       "WebFetch(domain:teeth886.github.io)",
       "PowerShell(Test-NetConnection *)",
-      "PowerShell(ping *)"
+      "PowerShell(ping *)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); try { $r = Invoke-WebRequest -Uri \"https://teeth886.github.io\" -UseBasicParsing -TimeoutSec 10; Write-Host \"Status: $\\($r.StatusCode\\)\"; $r.Content.Substring\\(0, [Math]::Min\\(800, $r.Content.Length\\)\\) } catch { Write-Host \"Error: $_\" })",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); try { $r = Invoke-RestMethod -Uri \"https://api.github.com/repos/Teeth886/Teeth886.github.io/actions/runs?per_page=3\" -Headers @{\"Accept\"=\"application/vnd.github+json\"; \"User-Agent\"=\"PowerShell\"} -TimeoutSec 10; $r.workflow_runs | ForEach-Object { Write-Host \"Run: $\\($_.name\\) | Status: $\\($_.status\\) | Conclusion: $\\($_.conclusion\\) | Created: $\\($_.created_at\\)\" } } catch { Write-Host \"Error: $\\($_.Exception.Message\\)\" })",
+      "Bash(curl *)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); try { $r = Invoke-RestMethod -Uri \"https://api.github.com/repos/Teeth886/Teeth886.github.io/actions/runs?per_page=1\" -Headers @{\"Accept\"=\"application/vnd.github+json\"; \"User-Agent\"=\"PowerShell\"} -TimeoutSec 10; $runId = $r.workflow_runs[0].id; Write-Host \"Latest run ID: $runId\"; $jobs = Invoke-RestMethod -Uri \"https://api.github.com/repos/Teeth886/Teeth886.github.io/actions/runs/$runId/jobs\" -Headers @{\"Accept\"=\"application/vnd.github+json\"; \"User-Agent\"=\"PowerShell\"} -TimeoutSec 10; $jobs.jobs | ForEach-Object { Write-Host \"Job: $\\($_.name\\) | Status: $\\($_.status\\) | Conclusion: $\\($_.conclusion\\)\"; $_.steps | ForEach-Object { Write-Host \"  Step: $\\($_.name\\) | Status: $\\($_.status\\) | Conclusion: $\\($_.conclusion\\)\" } } } catch { Write-Host \"Error: $\\($_.Exception.Message\\)\" })",
+      "Read(//e//**)",
+      "PowerShell(gem sources *)",
+      "Bash(/e/GitHubDesktopSetup-x64.exe *)"
     ]
   }
 }

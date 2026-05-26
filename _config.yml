@@ -1,5 +1,5 @@
 # Minimal Mistakes 主题配置
-remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
 
 # 站点信息
 locale: zh-CN
@@ -39,7 +39,6 @@ paginate_path: "/page:num/"
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
