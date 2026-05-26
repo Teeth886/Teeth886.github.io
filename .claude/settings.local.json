@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:mmistakes.github.io)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(winget install *)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); cd E:\\\\blog; git status)",
+      "PowerShell(git add *)"
+    ]
+  }
+}

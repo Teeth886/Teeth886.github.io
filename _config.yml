@@ -1,0 +1,102 @@
+# Minimal Mistakes 主题配置
+remote_theme: mmistakes/minimal-mistakes
+
+# 站点信息
+locale: zh-CN
+title: "欢迎来到Teeth的世界"
+title_separator: "-"
+subtitle: "用文字记录生活与技术"
+name: Teeth
+description: "用文字记录生活与技术的个人博客"
+url: "https://teeth886.github.io"
+baseurl: ""
+repository: "Teeth886/teeth886.github.io"
+
+# 作者信息
+author:
+  name: "Teeth"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "用文字记录生活与技术"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Teeth886"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:056369zk@gmail.com"
+
+# 头像
+logo: "/assets/images/avatar.jpg"
+
+# 构建设置
+permalink: /posts/:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
+paginate: 10
+paginate_path: "/page:num/"
+
+# 插件
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+# 主题默认值
+defaults:
+  # 所有文章
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      comments: true
+      share: true
+      related: true
+  # 所有页面
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# 侧边栏
+author_profile: true
+
+# 外观设置
+minimal_mistakes_skin: dark
+
+# 导航菜单（顶部）
+nav_include: ""
+
+# 社交分享
+social:
+  name: "GitHub"
+  links:
+    - "https://github.com/Teeth886"
+
+# 标签和分类
+tag_archive:
+  type: liquid
+  path: /tags/
+category_archive:
+  type: liquid
+  path: /categories/
+
+# UI 文本（中文本地化）
+ui:
+  toc_label: "目录"
+  toc_icon: "fas fa-file-alt"
+
+# 排除的文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

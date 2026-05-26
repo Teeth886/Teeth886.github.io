@@ -1,0 +1,11 @@
+Teeth:
+  name: "Teeth"
+  bio: "用文字记录生活与技术"
+  avatar: "/assets/images/avatar.jpg"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Teeth886"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:056369zk@gmail.com"
