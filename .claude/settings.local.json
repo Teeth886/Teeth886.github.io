@@ -11,7 +11,19 @@
       "PowerShell(git add *)",
       "PowerShell(git commit *)",
       "PowerShell(git push *)",
-      "PowerShell(git remote *)"
+      "PowerShell(git remote *)",
+      "PowerShell(gem *)",
+      "PowerShell(winget search *)",
+      "PowerShell(bundle install *)",
+      "PowerShell(gh *)",
+      "PowerShell(try { $response = Invoke-WebRequest -Uri \"https://teeth886.github.io\" -UseBasicParsing; Write-Host \"Status: $\\($response.StatusCode\\)\"; Write-Host \"--- First 500 chars ---\"; $response.Content.Substring\\(0, [Math]::Min\\(500, $response.Content.Length\\)\\) } catch { Write-Host \"Error: $_\" })",
+      "PowerShell(try { $r = Invoke-RestMethod -Uri \"https://api.github.com/repos/Teeth886/Teeth886.github.io/pages\"; Write-Host \"Source branch: $\\($r.source.branch\\)\"; Write-Host \"Build type: $\\($r.build_type\\)\"; Write-Host \"URL: $\\($r.html_url\\)\" } catch { Write-Host \"Error: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(git fetch *)",
+      "PowerShell(try { $r = Invoke-RestMethod -Uri \"https://api.github.com/repos/Teeth886/Teeth886.github.io/pages\" -Headers @{\"Accept\"=\"application/vnd.github+json\"}; $r | ConvertTo-Json } catch { Write-Host \"Status code: $\\($_.Exception.Response.StatusCode\\)\"; try { $reader = New-Object System.IO.StreamReader\\($_.Exception.Response.GetResponseStream\\(\\)\\); Write-Host $reader.ReadToEnd\\(\\) } catch {} })",
+      "PowerShell(gh auth *)",
+      "WebFetch(domain:teeth886.github.io)",
+      "PowerShell(Test-NetConnection *)",
+      "PowerShell(ping *)"
     ]
   }
 }
